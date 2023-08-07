@@ -1,0 +1,3 @@
+= HW6
+
+Implementace služby DELETE funguje tak, že po zavolání DELETE na `/tour/{id}` začne odpočet 10s, po kterém je záznam smazán. Zároveň dostane uživatel jako odpověď link na `/tour/delete-status`, kde si může nechat zobrazit všechny aktuálně mazané výlety.

@@ -1,0 +1,439 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "RESTful API Design"
+  description: "Simple design of a company that runs an application for a travel agency."
+schemes:
+- "https"
+host: "t-a.org"
+tags:
+  - name: "country"
+  - name: "location"
+  - name: "tour"
+  - name: "customer"
+paths:
+  /country:
+    get:
+      tags:
+        - "country"
+      summary: "list all countries"
+      description: ""
+      operationId: "getCountries"
+      responses:
+        "200":
+          description: "listing countries"
+          schema:
+            $ref: '#/definitions/country'
+    post:
+      tags:
+        - "country"
+      summary: "add new country"
+      description: ""
+      operationId: "postCountry"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "specification of a new country object"
+          required: true
+          schema:
+            $ref: "#/definitions/country"
+      responses:
+        "200":
+          description: "country succesfully added"
+          schema:
+            $ref: '#/definitions/country'
+        "405":
+          description: "invalid input"
+  /country/{countryid}:
+    get:   
+      tags:
+        - "country"
+      summary: "list country"
+      description: ""
+      operationId: "getCountry"
+      parameters:
+        - name: "countryid"
+          in: "path"
+          description: "id of country that needs to be updated"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "listing country"
+          schema:
+            $ref: '#/definitions/country'
+    put:
+      tags:
+        - "country"
+      summary: "update country"
+      description: ""
+      operationId: "putCountry"
+      parameters:
+        - name: "countryid"
+          in: "path"
+          description: "id of country that needs to be updated"
+          required: true
+          type: "string"
+        - in: "body"
+          name: "body"
+          description: "specification of an updated country object"
+          required: true
+          schema:
+            $ref: "#/definitions/country"
+      responses:
+        "200":
+          description: "country succesfully updated"
+        "400":
+          description: "invalid id"
+        "404":
+          description: "country not found"
+    delete:
+      tags:
+        - "country"
+      summary: "delete country"
+      description: ""
+      operationId: "deleteCountry"
+      parameters:
+        - name: "countryid"
+          in: "path"
+          description: "id of country that needs to be deleted"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "country succesfully deleted"
+        "400":
+          description: "invalid id"
+        "404":
+          description: "country not found"
+  /location:
+    get:
+      parameters:
+        - name: "country"
+          in: "query"
+          type: "string"
+          description: "list all locations in queried country"
+      tags:
+        - "location"
+      summary: "list all locations"
+      description: ""
+      operationId: "getLocations"
+      responses:
+        "200":
+          description: "listing locations"
+          schema:
+            $ref: '#/definitions/location'
+    post:
+      tags:
+        - "location"
+      summary: "add new location"
+      description: ""
+      operationId: "postLocation"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "specification of a new location object"
+          required: true
+          schema:
+            $ref: "#/definitions/location"
+      responses:
+        "200":
+          description: "location succesfully added"
+          schema:
+            $ref: '#/definitions/location'
+        "405":
+          description: "invalid input"
+  /location/{locationid}:
+    get:   
+      tags:
+        - "location"
+      summary: "list location"
+      description: ""
+      operationId: "getLocation"
+      parameters:
+        - name: "locationid"
+          in: "path"
+          description: "id of location that needs to be updated"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "listing location"
+          schema:
+            $ref: '#/definitions/location'
+    put:
+      tags:
+        - "location"
+      summary: "update location"
+      description: ""
+      operationId: "putLocation"
+      parameters:
+        - name: "locationid"
+          in: "path"
+          description: "id of location that needs to be updated"
+          required: true
+          type: "string"
+        - in: "body"
+          name: "body"
+          description: "specification of an updated location object"
+          required: true
+          schema:
+            $ref: "#/definitions/location"
+      responses:
+        "200":
+          description: "location succesfully updated"
+        "400":
+          description: "invalid id"
+        "404":
+          description: "location not found"
+    delete:
+      tags:
+        - "location"
+      summary: "delete location"
+      description: ""
+      operationId: "deleteLocation"
+      parameters:
+        - name: "locationid"
+          in: "path"
+          description: "id of location that needs to be deleted"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "location succesfully deleted"
+        "400":
+          description: "invalid id"
+        "404":
+          description: "location not found"
+  /tour:
+    get:
+      parameters:
+        - name: "customer"
+          in: "query"
+          type: "string"
+          description: "list all tours in queried customer"
+      tags:
+        - "tour"
+      summary: "list all tours"
+      description: ""
+      operationId: "geTours"
+      responses:
+        "200":
+          description: "listing tours"
+          schema:
+            $ref: '#/definitions/tour'
+    post:
+      tags:
+        - "tour"
+      summary: "add new tour"
+      description: ""
+      operationId: "postTour"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "specification of a new tour object"
+          required: true
+          schema:
+            $ref: "#/definitions/tour"
+      responses:
+        "200":
+          description: "location succesfully added"
+          schema:
+            $ref: '#/definitions/tour'
+        "405":
+          description: "invalid input"
+  /tour/{tourid}:
+    get:   
+      tags:
+        - "tour"
+      summary: "list tour"
+      description: ""
+      operationId: "getTour"
+      parameters:
+        - name: "tourid"
+          in: "path"
+          description: "id of tour that needs to be updated"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "listing tour"
+          schema:
+            $ref: '#/definitions/tour'
+    put:
+      tags:
+        - "tour"
+      summary: "update tour"
+      description: ""
+      operationId: "putTour"
+      parameters:
+        - name: "tourid"
+          in: "path"
+          description: "id of tour that needs to be updated"
+          required: true
+          type: "string"
+        - in: "body"
+          name: "body"
+          description: "specification of an updated tour object"
+          required: true
+          schema:
+            $ref: "#/definitions/tour"
+      responses:
+        "200":
+          description: "tour succesfully updated"
+        "400":
+          description: "invalid id"
+        "404":
+          description: "tour not found"
+    delete:
+      tags:
+        - "tour"
+      summary: "delete tour"
+      description: ""
+      operationId: "deleteTour"
+      parameters:
+        - name: "tourid"
+          in: "path"
+          description: "id of tour that needs to be deleted"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "tour succesfully deleted"
+        "400":
+          description: "invalid id"
+        "404":
+          description: "tour not found"
+  /customer:
+    get:
+      tags:
+        - "customer"
+      summary: "list all customers"
+      description: ""
+      operationId: "getCustomers"
+      responses:
+        "200":
+          description: "listing customers"
+          schema:
+            $ref: '#/definitions/customer'
+    post:
+      tags:
+        - "customer"
+      summary: "add new customer"
+      description: ""
+      operationId: "postCustomer"
+      parameters:
+        - in: "body"
+          name: "body"
+          description: "specification of a new customer object"
+          required: true
+          schema:
+            $ref: "#/definitions/customer"
+      responses:
+        "200":
+          description: "customer succesfully added"
+          schema:
+            $ref: '#/definitions/customer'
+        "405":
+          description: "invalid input"
+  /customer/{customerid}:
+    get:   
+      tags:
+        - "customer"
+      summary: "list customer"
+      description: ""
+      operationId: "getCustomer"
+      parameters:
+        - name: "customerid"
+          in: "path"
+          description: "id of customer that needs to be updated"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "listing customer"
+          schema:
+            $ref: '#/definitions/customer'
+    put:
+      tags:
+        - "customer"
+      summary: "update customer"
+      description: ""
+      operationId: "putCustomer"
+      parameters:
+        - name: "customerid"
+          in: "path"
+          description: "id of customer that needs to be updated"
+          required: true
+          type: "string"
+        - in: "body"
+          name: "body"
+          description: "specification of an updated customer object"
+          required: true
+          schema:
+            $ref: "#/definitions/customer"
+      responses:
+        "200":
+          description: "customer succesfully updated"
+        "400":
+          description: "invalid id"
+        "404":
+          description: "customer not found"
+    delete:
+      tags:
+        - "customer"
+      summary: "delete customer"
+      description: ""
+      operationId: "deleteCustomer"
+      parameters:
+        - name: "customerid"
+          in: "path"
+          description: "id of customer that needs to be deleted"
+          required: true
+          type: "string"
+      responses:
+        "200":
+          description: "customer succesfully deleted"
+        "400":
+          description: "invalid id"
+        "404":
+          description: "customer not found"
+  
+definitions:
+  country:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+  location:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      country:
+        type: "object"
+        format: "#/definitions/country"
+  tour:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"
+      location:
+        type: "object"
+        format: "#/definitions/location"
+      customer:
+        type: "object"
+        format: "#/definitions/customer"
+  customer:
+    type: "object"
+    properties:
+      id:
+        type: "integer"
+      name:
+        type: "string"

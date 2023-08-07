@@ -1,0 +1,28 @@
+= HW7
+
+Implementace zařizuje po zavolání GET na `/tour`, `/tour/strong` nebo `/tour/weak` přidání strong/weak ETagu a časového parametru last modified.
+
+## Strong ETag
+
+Nejprve zavoláme `/tour/strong`, poté to stejné, ale za použití ETagu z předchozího výstupu. Následně přidáme zákazníka a po opětovném zavoláním `/tour/strong` s původním ETagem můžeme vidět, že ETag zůstává nezměněn. Následuje postup v obrázcích z testování:
+
+image::07/results/tour_strong.png[,800]
+image::07/results/tour_strong_2.png[,800]
+image::07/results/tour_strong_3.png[,800]
+image::07/results/tour_strong_4.png[,800]
+
+## Weak ETag
+
+Funguje podobně jako strong ETag, ale používá jiné hashování. Opět nejprve zavoláme `/tour/weak`, poté to stejné, ale za použití ETagu z předchozího výstupu. Následně přidáme zákazníka a po opětovném zavoláním `/tour/weak` s původním ETagem můžeme vidět, že ETag zůstává nezměněn. Následuje postup v obrázcích z testování:
+
+image::07/results/tour_weak.png[,800]
+image::07/results/tour_weak_2.png[,800]
+image::07/results/tour_weak_3.png[,800]
+image::07/results/tour_weak_4.png[,800]
+
+## Last Modified
+
+Volání GET na `/tours` a `/tours/weak` lze také podmínit s `If-Modified-Since`, kdy dostáváme odpověď podle času od poslední modifikace:
+
+image::07/results/tour_modified.png[,800]
+image::07/results/tour_modified_1.png[,800]
