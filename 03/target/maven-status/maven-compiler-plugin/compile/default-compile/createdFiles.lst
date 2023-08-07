@@ -1,0 +1,15 @@
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\UpdateBookingResponse.class
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\GetBookingsRequest.class
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\UpdateBookingRequest.class
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\Booking.class
+cz\cvut\fit\niam1\wsserver\WebServiceEndpoint.class
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\AddBookingRequest.class
+cz\cvut\fit\niam1\wsserver\WebServiceApplication.class
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\package-info.class
+cz\cvut\fit\niam1\wsserver\WebServiceConfig.class
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\DeleteBookingRequest.class
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\DeleteBookingResponse.class
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\GetBookingsResponse.class
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\ObjectFactory.class
+cz\cvut\fit\niam1\wsserver\WebServiceRepository.class
+https\courses_fit_cvut_cz\ni_am1\tutorials\web_services\AddBookingResponse.class

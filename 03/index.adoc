@@ -1,0 +1,9 @@
+= HW3
+
+Rozcestník 
+
+* .xsd config lze nalézt link:/03/src/main/resources/bookings.xsd[zde].
+* SoapUI projekt lze nalézt link:/03/results/bookings-soapui-project.xml[zde].
+* screenshot ze SoapUI lze nalézt link:/03/results/soap_project.png[zde].
+
+Implementace využívá jednoduchého statického listu představující databázi rezervací. V SoapUI byly vytvořeny 4 testovací scénáře (list bookings, add new booking, delete first booking a update new booking) skládající se každý z 1-2 kroků.

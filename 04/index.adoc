@@ -1,0 +1,3 @@
+= HW4 
+
+Založil jsem projekt, vytvořil jsem payments.xsd a napsal jsem třídy na správu klienta. Bohužel při snaze spustit projekt dostávám error, který se mi nepodařilo vyřešit.

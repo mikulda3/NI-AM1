@@ -1,0 +1,33 @@
+~ ❯❯❯ curl http://147.32.233.18:8888/NI-AM1-ApplicationProtocols/protocol/welcome
+OK
+Your next page is /protocol/get
+send GET parameter "name" with value "fuzzy"
+set Header "Accept" to "text/plain"
+~ ❯❯❯ curl -X GET -H "Accept: text/plain" 'http://147.32.233.18:8888/NI-AM1-ApplicationProtocols/protocol/get?name=wi'
+OK
+Your next page is /protocol/post
+send POST parameter "name" with value "voter"
+and set Header "Accept" is "text/plain"
+and set Header "Accept-Language" is "en-US"
+~ ❯❯❯ curl -X POST -H "Accept: text/plain" -H "Accept-Language: en-US" -d "name=voter" http://147.32.233.18:8888/NI-AM1-ApplicationProtocols/protocol/post
+OK
+Your next page is /protocol/referer
+change referer to value "screen"
+set Header "Accept" is "text/html"
+~ ❯❯❯ curl -H "Referer: screen" -H "Accept: text/html" http://147.32.233.18:8888/NI-AM1-ApplicationProtocols/protocol/referer
+OK
+Your next page is /protocol/useragent
+and change User-Agent to value "prior"
+and set Header "Accept-Language" is "en-US"
+~ ❯❯❯ curl -H "User-Agent: prior" -H "Accept-Language: en-US" http://147.32.233.18:8888/NI-AM1-ApplicationProtocols/protocol/useragent
+OK
+Your next page is /protocol/cookie
+send cookie called "name" with value "has"
+~ ❯❯❯ curl -b name=has http://147.32.233.18:8888/NI-AM1-ApplicationProtocols/protocol/cookie
+OK
+Your next page is /protocol/auth
+authenticate by "latter:tolerated"
+set Header "Accept" is "text/html"
+~ ❯❯❯ curl -u latter:tolerated -H "Accept: text/html" http://147.32.233.18:8888/NI-AM1-ApplicationProtocols/protocol/auth
+OK
+Your final result is: invalidates

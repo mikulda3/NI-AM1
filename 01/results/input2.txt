@@ -1,0 +1,12 @@
+Ni Hao,
+
+please find the details about my booking below:
+
+===
+Tour id: "2"
+Location: "Taiwan"
+Person: "David Mikulka"
+===
+
+Best regards,
+David Mikulka

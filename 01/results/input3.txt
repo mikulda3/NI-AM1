@@ -1,0 +1,12 @@
+Hello,
+
+here are the details:
+
+===
+Tour id: "3"
+Location: "New York City"
+Person: "Peter Parker"
+===
+
+Yours sincerely,
+Peter Parker

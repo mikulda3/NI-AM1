@@ -1,0 +1,15 @@
+cz\cvut\fit\niam1\webservices\hw04\package-info.class
+cz\cvut\fit\niam1\webservices\hw04\ValidateCardResponse.class
+cz\cvut\fit\niam1\webservices\hw04\ObjectFactory.class
+cz\cvut\fit\niam1\wsserver\WebServiceEndpoint.class
+cz\cvut\fit\niam1\wsserver\WebServiceApplication.class
+cz\cvut\fit\niam1\webservices\hw04\AddPaymentRequest.class
+cz\cvut\fit\niam1\wsserver\ValidationClientConfig.class
+cz\cvut\fit\niam1\webservices\hw04\AddPaymentResponse.class
+cz\cvut\fit\niam1\webservices\hw04\ValidateCardRequest.class
+cz\cvut\fit\niam1\wsserver\WebServiceConfig.class
+cz\cvut\fit\niam1\wsserver\ValidationClient.class
+cz\cvut\fit\niam1\webservices\hw04\Payment.class
+cz\cvut\fit\niam1\webservices\hw04\GetPaymentsResponse.class
+cz\cvut\fit\niam1\wsserver\WebServiceRepository.class
+cz\cvut\fit\niam1\webservices\hw04\GetPaymentsRequest.class
